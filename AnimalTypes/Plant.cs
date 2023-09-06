@@ -4,7 +4,15 @@ namespace OOPArv.AnimalTypes
 {
     public class Plant : Animal
     {
-        protected bool _hasThorns;
+        protected bool _hasThorns { get; set; }
+
+        public Plant()
+        {
+            _name = "Plantan";
+            _diet = "Soil";
+            _animalType = AnimalType.Plant;
+            _hasThorns = true;
+        }
         public Plant(string name, string species, string diet, int age, bool isWild, AnimalType animalType, bool hasThorns) : base(name, species, diet, age, isWild, animalType)
         {
             _hasThorns = hasThorns;

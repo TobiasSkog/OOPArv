@@ -5,9 +5,19 @@ namespace OOPArv.AnimalTypes
     public class Reptile : Animal
     {
         protected bool _hasScales;
+        public Reptile()
+        {
+            base._name = "Ödlan";
+            base._diet = "Kött";
+            base._animalType = AnimalType.Reptile;
+
+            _hasScales = true;
+
+        }
         public Reptile(string name, string species, string diet, int age, bool isWild, AnimalType animalType, bool hasScales) : base(name, species, diet, age, isWild, animalType)
         {
             _hasScales = hasScales;
+
         }
         public override void MakeSound()
         {

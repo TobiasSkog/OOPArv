@@ -4,9 +4,16 @@ namespace OOPArv.Animals
 {
     public class Cat : Mammal
     {
-        public Cat(string name, string species, string diet, int age, bool isWild, string furType) : base(name, species, diet, age, isWild, AnimalType.Mammal, furType)
+        protected bool _isFriendly { get; set; }
+        public Cat()
         {
-
+            _name = "Lasse";
+            _species = "katt";
+            _isFriendly = true;
+        }
+        public Cat(string name, string species, string diet, int age, bool isWild, string furType, bool isFriendly) : base(name, species, diet, age, isWild, AnimalType.Mammal, furType)
+        {
+            _isFriendly = isFriendly;
         }
         public override void MakeSound()
         {

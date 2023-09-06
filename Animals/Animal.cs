@@ -5,13 +5,14 @@
     /// </summary>
     public enum AnimalType
     {
-        Mammal,
-        Reptile,
-        Plant
+        Unassigned = -1,
+        Mammal = 0,
+        Reptile = 1,
+        Plant = 2
     }
 
     /// <summary>
-    /// Super Class Animal that will be the base for all the subclasses in this project
+    /// Abstract Super Class Animal that will be the base for all the subclasses in this project
     /// </summary>
     public abstract class Animal
     {
@@ -25,30 +26,46 @@
         protected int _age { get; set; }
         protected bool _isWild { get; set; }
         protected AnimalType _animalType { get; set; }
+
         /// <summary>
         /// Constructor for the Animal Super Class used in the assignment
+        /// Default values are assigned if an attribute is leftout
+        /// Using the GetAnimalType method to assign a default value to _speices
         /// </summary>
         /// <param name="name">string - name of the animal</param>
-        /// <param name="species">string - species of the animal</param>
         /// <param name="diet">string - the diet of the animal</param>
         /// <param name="age">int - the current age of the animal</param>
         /// <param name="isWild">bool - if the animal is wild</param>
         /// <param name="animalType">enum - type of animal (Mammal, Reptile, Plant)</param>
-        public Animal(string name, string species, string diet, int age, bool isWild, AnimalType animalType)
+        public Animal(string name = "Kattla", string species = "[]", string diet = "Mums-Mums", int age = 42, bool isWild = true, AnimalType animalType = AnimalType.Unassigned)
         {
             _name = name;
-            _species = species;
             _diet = diet;
+            _species = GetAnimalType(animalType, species);
             _age = age;
             _isWild = isWild;
             _animalType = animalType;
         }
+
+        public AnimalType ANIMALTYPE
+        {
+            get { return _animalType; }
+        }
         /// <summary>
-        /// Writes out to the console the name of the animal what spieces they are and what age
+        /// Writes out to the console the name, species and age of the Animal
+        /// Could use GetAnimalType method to assign the values to _species directly
+        /// But this way we can play around with the code and have fun
         /// </summary>
         public void Introduction()
         {
-            Console.WriteLine($"{_name} är en {_species} på {_age} år.");
+            Console.WriteLine($"{_name} är {_species switch
+            {
+                "Unassigned Spieces" => "ett odefinerat djur",
+                "Mammal" => "ett däggdjur",
+                "Reptile" => "en reptil",
+                "Plant" => "en planta",
+                _ => _species
+            }} på {_age} år.");
         }
         /// <summary>
         /// abstract method that all subclasses have to implement that 
@@ -65,5 +82,51 @@
         /// will write out how the animal adapted to its envirement
         /// </summary>
         public abstract void AdaptToEnviroment();
+
+
+        protected string GetAnimalType(AnimalType animalType, string species)
+        {
+
+            Console.WriteLine(animalType.ToString());
+
+            if (species == "[]")
+            {
+                return (int)animalType switch
+                {
+                    0 => "Mammal",
+                    1 => "Reptile",
+                    2 => "Plant",
+                    -1 => "Unassigned Spieces",
+                    _ => "Unkown Spieces, how did we get here?"
+                };
+            }
+            else
+            {
+                return species;
+            }
+
+
+
+            //switch (animalType)
+            //{
+            //    case AnimalType.Mammal:
+            //        return "Mammal";
+            //    case AnimalType.Reptile:
+            //        return "Reptile";
+            //    case AnimalType.Plant:
+            //        return "Plant";
+            //    default:
+            //        return "Unkown Spieces";
+            //}
+
+            //
+            //Unassigned = -1,
+            //Mammal = 0,
+            //Reptile = 1,
+            //Plant = 2
+
+
+
+        }
     }
 }

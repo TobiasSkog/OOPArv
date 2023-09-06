@@ -5,7 +5,17 @@ namespace OOPArv.AnimalTypes
 
     public class Mammal : Animal
     {
-        protected string _furType;
+        protected string _furType { get; set; }
+        public Mammal()
+        {
+            _name = "Bosse";
+            _diet = "kaniner";
+            _age = 52;
+            _animalType = AnimalType.Mammal;
+            _furType = "kort men mjukt";
+
+        }
+
         public Mammal(string name, string species, string diet, int age, bool isWild, AnimalType animalType, string furType) : base(name, species, diet, age, isWild, animalType)
         {
             _furType = furType;
