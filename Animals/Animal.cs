@@ -89,7 +89,7 @@
 
             Console.WriteLine(animalType.ToString());
 
-            if (species == "[]")
+            if (species == "[]" && animalType != AnimalType.Unassigned)
             {
                 return (int)animalType switch
                 {
@@ -99,6 +99,10 @@
                     -1 => "Unassigned Spieces",
                     _ => "Unkown Spieces, how did we get here?"
                 };
+            }
+            else if (species == "[]")
+            {
+                return "Unassigned Spieces";
             }
             else
             {
