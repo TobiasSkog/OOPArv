@@ -4,9 +4,19 @@ namespace OOPArv.Animals
 {
     public class Dog : Mammal
     {
-        public Dog(string name, string species, string diet, int age, bool isWild, string furType) : base(name, species, diet, age, isWild, AnimalType.Mammal, furType)
+        protected bool _likesToSleep { get; set; }
+        public Dog(
+            string name = "Hunden",
+            string species = "[]",
+            string diet = "torrfoder",
+            int age = 5,
+            bool isWild = false,
+            AnimalType animalType = AnimalType.Mammal,
+            string furType = "lång och mjukt",
+            bool likesToSleep = true
+        ) : base(name, species, diet, age, isWild, animalType, furType)
         {
-
+            _likesToSleep = likesToSleep;
         }
         public override void MakeSound()
         {

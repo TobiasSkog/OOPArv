@@ -37,19 +37,21 @@
         /// <param name="age">int - the current age of the animal</param>
         /// <param name="isWild">bool - if the animal is wild</param>
         /// <param name="animalType">enum - type of animal (Mammal, Reptile, Plant)</param>
-        public Animal(string name = "Kattla", string species = "[]", string diet = "Mums-Mums", int age = 42, bool isWild = true, AnimalType animalType = AnimalType.Unassigned)
+        public Animal(
+            string name = "Djuret",
+            string species = "[]",
+            string diet = "Mums-Mums",
+            int age = 42,
+            bool isWild = true,
+            AnimalType animalType = AnimalType.Unassigned
+        )
         {
             _name = name;
             _diet = diet;
-            _species = GetAnimalType(animalType, species);
             _age = age;
             _isWild = isWild;
             _animalType = animalType;
-        }
-
-        public AnimalType ANIMALTYPE
-        {
-            get { return _animalType; }
+            _species = GetAnimalType(_animalType, species);
         }
         /// <summary>
         /// Writes out to the console the name, species and age of the Animal
@@ -86,7 +88,7 @@
 
         protected string GetAnimalType(AnimalType animalType, string species)
         {
-            if (species == "[]" && animalType != AnimalType.Unassigned)
+            if (species == "[]")
             {
                 return (int)animalType switch
                 {
@@ -97,37 +99,10 @@
                     _ => "Unkown Spieces, how did we get here?"
                 };
             }
-            else if (species == "[]")
-            {
-                return "Unassigned Spieces";
-            }
             else
             {
                 return species;
             }
-
-
-
-            //switch (animalType)
-            //{
-            //    case AnimalType.Mammal:
-            //        return "Mammal";
-            //    case AnimalType.Reptile:
-            //        return "Reptile";
-            //    case AnimalType.Plant:
-            //        return "Plant";
-            //    default:
-            //        return "Unkown Spieces";
-            //}
-
-            //
-            //Unassigned = -1,
-            //Mammal = 0,
-            //Reptile = 1,
-            //Plant = 2
-
-
-
         }
     }
 }

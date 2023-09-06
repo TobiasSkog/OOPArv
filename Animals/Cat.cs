@@ -5,13 +5,16 @@ namespace OOPArv.Animals
     public class Cat : Mammal
     {
         protected bool _isFriendly { get; set; }
-        public Cat()
-        {
-            _name = "Lasse";
-            _species = "katt";
-            _isFriendly = true;
-        }
-        public Cat(string name, string species, string diet, int age, bool isWild, string furType, bool isFriendly) : base(name, species, diet, age, isWild, AnimalType.Mammal, furType)
+        public Cat(
+            string name = "Katten",
+            string species = "[]",
+            string diet = "inte det som serveras",
+            int age = 16,
+            bool isWild = false,
+            AnimalType animalType = AnimalType.Mammal,
+            string furType = "lång och mjuk",
+            bool isFriendly = true
+        ) : base(name, species, diet, age, isWild, animalType, furType)
         {
             _isFriendly = isFriendly;
         }

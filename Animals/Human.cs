@@ -4,9 +4,19 @@ namespace OOPArv.Animals
 {
     public class Human : Mammal
     {
-        public Human(string name, string species, string diet, int age, bool isWild, string furType) : base(name, species, diet, age, isWild, AnimalType.Mammal, furType)
+        protected bool _socialFobi { get; set; }
+        public Human(
+            string name = "Människan",
+            string species = "[]",
+            string diet = "donken",
+            int age = 33,
+            bool isWild = false,
+            AnimalType animalType = AnimalType.Mammal,
+            string furType = "flintskallig",
+            bool socialFobi = true
+        ) : base(name, species, diet, age, isWild, animalType, furType)
         {
-
+            _socialFobi = socialFobi;
         }
         public override void MakeSound()
         {

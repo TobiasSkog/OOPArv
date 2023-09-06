@@ -6,14 +6,15 @@ namespace OOPArv.AnimalTypes
     {
         protected bool _hasThorns { get; set; }
 
-        public Plant()
-        {
-            _name = "Plantan";
-            _diet = "Soil";
-            _animalType = AnimalType.Plant;
-            _hasThorns = true;
-        }
-        public Plant(string name, string species, string diet, int age, bool isWild, AnimalType animalType, bool hasThorns) : base(name, species, diet, age, isWild, animalType)
+        public Plant(
+            string name = "Plantan",
+            string species = "[]",
+            string diet = "jord",
+            int age = 5,
+            bool isWild = true,
+            AnimalType animalType = AnimalType.Plant,
+            bool hasThorns = true
+        ) : base(name, species, diet, age, isWild, animalType)
         {
             _hasThorns = hasThorns;
         }
