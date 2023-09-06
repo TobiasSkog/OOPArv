@@ -86,9 +86,6 @@
 
         protected string GetAnimalType(AnimalType animalType, string species)
         {
-
-            Console.WriteLine(animalType.ToString());
-
             if (species == "[]" && animalType != AnimalType.Unassigned)
             {
                 return (int)animalType switch
