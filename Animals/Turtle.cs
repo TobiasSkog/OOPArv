@@ -5,6 +5,18 @@ namespace OOPArv.Animals
     public class Turtle : Reptile
     {
         protected string _neckRetraction { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name">string - name of the turtle</param>
+        /// <param name="species">string - species of the turtle</param>
+        /// <param name="diet">string - the diet of the turtle, lowercase</param>
+        /// <param name="age">int - the current age of the turtle</param>
+        /// <param name="isWild">bool - if the turtle is wild</param>
+        /// <param name="animalType">enum - type of animal (Unassigned, Mammal, Reptile, Plant)</param>
+        /// <param name="hasScales">bool - if the turtle have scales or not</param>
+        /// <param name="neckRetraction">string - the kind of neck retraction the turtle have</param>
         public Turtle(
             string name = "Sköldpaddan",
             string species = "[]",

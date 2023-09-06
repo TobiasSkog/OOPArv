@@ -6,6 +6,16 @@ namespace OOPArv.AnimalTypes
     public class Mammal : Animal
     {
         protected string _furType { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name">string - name of the mammal</param>
+        /// <param name="species">string - species of the mammal</param>
+        /// <param name="diet">string - the diet of the mammal, lowercase</param>
+        /// <param name="age">int - the current age of the mammal</param>
+        /// <param name="isWild">bool - if the mammal is wild</param>
+        /// <param name="animalType">enum - type of animal (Unassigned, Mammal, Reptile, Plant)</param>
+        /// <param name="furType">string - description of the fur of the mammal</param>
         public Mammal(
             string name = "Däggdjuret",
             string species = "[]",
@@ -28,7 +38,7 @@ namespace OOPArv.AnimalTypes
         }
         public override void AdaptToEnviroment()
         {
-            Console.WriteLine($"{_name} anpassar sig till miljönd med {_furType} päls för värme och skydd.");
+            Console.WriteLine($"{_name} anpassar sig till miljön med {_furType} päls för värme och skydd.");
         }
     }
 }

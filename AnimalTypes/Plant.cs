@@ -5,7 +5,16 @@ namespace OOPArv.AnimalTypes
     public class Plant : Animal
     {
         protected bool _hasThorns { get; set; }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name">string - name of the plant</param>
+        /// <param name="species">string - species of the plant</param>
+        /// <param name="diet">string - the diet of the plant, lowercase</param>
+        /// <param name="age">int - the current age of the plant</param>
+        /// <param name="isWild">bool - if the plant is wild</param>
+        /// <param name="animalType">enum - type of animal (Unassigned, Mammal, Reptile, Plant)</param>
+        /// <param name="hasThorns">bool - if the plant have thorns</param>
         public Plant(
             string name = "Plantan",
             string species = "[]",

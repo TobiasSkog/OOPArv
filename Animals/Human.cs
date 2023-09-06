@@ -5,6 +5,10 @@ namespace OOPArv.Animals
     public class Human : Mammal
     {
         protected bool _socialFobi { get; set; }
+        //public Human(bool socialFobi = true) : base(name: "Människan", diet: "burgerking", age: 22, isWild: true, furType: "lång och ovårdad")
+        //{
+        //    _socialFobi = socialFobi;
+        //}
         public Human(
             string name = "Människan",
             string species = "[]",
@@ -13,7 +17,7 @@ namespace OOPArv.Animals
             bool isWild = false,
             AnimalType animalType = AnimalType.Mammal,
             string furType = "flintskallig",
-            bool socialFobi = true
+            bool socialFobi = false
         ) : base(name, species, diet, age, isWild, animalType, furType)
         {
             _socialFobi = socialFobi;

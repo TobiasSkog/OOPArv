@@ -30,13 +30,14 @@
         /// <summary>
         /// Constructor for the Animal Super Class used in the assignment
         /// Default values are assigned if an attribute is leftout
-        /// Using the GetAnimalType method to assign a default value to _speices
+        /// Using the GetAnimalType method to assign a default value to _speices based on the animalType
         /// </summary>
         /// <param name="name">string - name of the animal</param>
-        /// <param name="diet">string - the diet of the animal</param>
+        /// <param name="species">string - species of the animal</param>
+        /// <param name="diet">string - the diet of the animal, lowercase</param>
         /// <param name="age">int - the current age of the animal</param>
         /// <param name="isWild">bool - if the animal is wild</param>
-        /// <param name="animalType">enum - type of animal (Mammal, Reptile, Plant)</param>
+        /// <param name="animalType">enum - type of animal (Unassigned, Mammal, Reptile, Plant)</param>
         public Animal(
             string name = "Djuret",
             string species = "[]",

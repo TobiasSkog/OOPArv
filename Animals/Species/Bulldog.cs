@@ -3,6 +3,18 @@
     internal class Bulldog : Dog
     {
         protected bool _isDrooling { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name">string - name of the bulldog</param>
+        /// <param name="species">string - species of the bulldog</param>
+        /// <param name="diet">string - the diet of the bulldog, lowercase</param>
+        /// <param name="age">int - the current age of the bulldog</param>
+        /// <param name="isWild">bool - if the bulldog is wild</param>
+        /// <param name="animalType">enum - type of animal (Unassigned, Mammal, Reptile, Plant)</param>
+        /// <param name="furType">string - description of the fur of the bulldog</param>
+        /// <param name="likesToSleep">bool - if the bulldog likes to sleep</param>
+        /// <param name="isDrooling">bool - if the bulldog is drooling</param>
         public Bulldog(
             string name = "Bulldogen",
             string species = "[]",
