@@ -16,10 +16,8 @@
     /// </summary>
     public abstract class Animal
     {
-        /// <summary>
-        /// The attributes for the Animal Class are all protected to keep the code encapsulated and
-        /// protected so that they cannot be changed outside the scope of the class
-        /// </summary>
+        // Default attribute of the Animal class and all it's sub classes
+        // Protected and encapsulated in the scope of the class (and subclasses)
         protected string _name { get; set; }
         protected string _species { get; set; }
         protected string _diet { get; set; }
@@ -28,16 +26,14 @@
         protected AnimalType _animalType { get; set; }
 
         /// <summary>
-        /// Constructor for the Animal Super Class used in the assignment
-        /// Default values are assigned if an attribute is leftout
-        /// Using the GetAnimalType method to assign a default value to _speices based on the animalType
+        /// Constructor that assigns default values to the class if its not given an input
         /// </summary>
-        /// <param name="name">string - name of the animal</param>
-        /// <param name="species">string - species of the animal</param>
-        /// <param name="diet">string - the diet of the animal, lowercase</param>
-        /// <param name="age">int - the current age of the animal</param>
-        /// <param name="isWild">bool - if the animal is wild</param>
-        /// <param name="animalType">enum - type of animal (Unassigned, Mammal, Reptile, Plant)</param>
+        /// <param name="name">The name of the animal</param>
+        /// <param name="species">The species of the animal</param>
+        /// <param name="diet">The diet of the animal, lowercase</param>
+        /// <param name="age">The current age of the animal</param>
+        /// <param name="isWild">If the animal is wild</param>
+        /// <param name="animalType">Type of animal (Unassigned, Mammal, Reptile, Plant)</param>
         public Animal(
             string name = "Djuret",
             string species = "[]",
@@ -54,8 +50,10 @@
             _animalType = animalType;
             _species = GetAnimalType(_animalType, species);
         }
+
         /// <summary>
         /// Writes out to the console the name, species and age of the Animal
+        /// Stringinterpolation output based on _species variable
         /// Could use GetAnimalType method to assign the values to _species directly
         /// But this way we can play around with the code and have fun
         /// </summary>
@@ -82,11 +80,19 @@
         public abstract void Eat();
         /// <summary>
         /// abstract method that all subclasses have to implement that 
-        /// will write out how the animal adapted to its envirement
+        /// will write out how the animal adapted to its envirement for survival 
         /// </summary>
         public abstract void AdaptToEnviroment();
 
-
+        /// <summary>
+        /// If the _species attribute is left to default values in assignment this method
+        /// will assign a default value to _species depending on what animalType we pass in
+        /// <br> Note: switch method inside that parses the enum as an int</br>
+        /// </summary>
+        /// <param name="animalType">What kind of Animal is it? (Unassigned, Mammal, Reptile, Plant)"</param>
+        /// <param name="species">The animals species value when creating the object</param>
+        /// <returns>String that describe what kind of animal it is
+        /// If the user defined a species when creating the object the user value is returned</returns>
         protected string GetAnimalType(AnimalType animalType, string species)
         {
             if (species == "[]")
