@@ -34,5 +34,10 @@ namespace OOPArv.Animals
         {
             Console.WriteLine($"{_name} anpassade miljön runt omkring sig istället för att anpassa sig själv för överlevnad.");
         }
+
+        public void Studdy()
+        {
+            Console.WriteLine($"{_name} studerar C#.");
+        }
     }
 }

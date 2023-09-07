@@ -41,5 +41,10 @@ namespace OOPArv.Animals
         {
             Console.WriteLine($"{_name} förlitar sig på människan för sin överlevnad.");
         }
+
+        public virtual void WiggleTail()
+        {
+            Console.WriteLine($"{_name} viftar på svansen.");
+        }
     }
 }

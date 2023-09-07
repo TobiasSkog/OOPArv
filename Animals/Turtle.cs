@@ -42,5 +42,10 @@ namespace OOPArv.Animals
         {
             Console.WriteLine($"{_name} har ett starkt skal för att skydda sig mot faror.");
         }
+
+        public void RunAway()
+        {
+            Console.WriteLine($"{_name} springer iväg och gömmer sig.");
+        }
     }
 }

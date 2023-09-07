@@ -30,5 +30,17 @@ namespace OOPArv.Animals.Species
         {
             _invasive = invasive;
         }
+
+        public void Grow()
+        {
+            if (_invasive)
+            {
+                Console.WriteLine($"{_name} växer och tar över hela trädgården.");
+            }
+            else
+            {
+                Console.WriteLine($"{_name} växer ett nytt blad.");
+            }
+        }
     }
 }

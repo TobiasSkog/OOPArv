@@ -33,5 +33,22 @@
         {
             Console.WriteLine("WÖFF");
         }
+
+        public override void WiggleTail()
+        {
+            Console.WriteLine($"{_name} försöker vifta på svansen.");
+        }
+
+        public void Drool()
+        {
+            if (_isDrooling)
+            {
+                Console.WriteLine($"{_name} dregglar frenetiskt.");
+            }
+            else
+            {
+                Console.WriteLine($"{_name} har slutat dreggla.");
+            }
+        }
     }
 }

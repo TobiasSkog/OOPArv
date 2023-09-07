@@ -66,6 +66,8 @@ internal class Program
         // Foreach loop where we loop the list of animals and
         // for every animal we call the methods 
         // Introduction, MakeSound, Eat, AdaptToEnviroment
+        // logic to check if the current animal is of the type x
+        // then we call that specific class extra method
         // then add a new line at the end to make the output
         // easier to read
         foreach (var animal in animals)
@@ -75,8 +77,35 @@ internal class Program
             animal.Eat();
             animal.AdaptToEnviroment();
 
-            Console.WriteLine();
-        }
+            if (animal is Dog d)
+            {
+                d.WiggleTail();
 
+                if (animal is Chihuahua dog_c)
+                {
+                    dog_c.BegForFood();
+                }
+                else if (animal is Bulldog dog_b)
+                {
+                    dog_b.Drool();
+                }
+            }
+            else if (animal is Cat c)
+            {
+                c.Climb();
+            }
+            else if (animal is Turtle t)
+            {
+                t.RunAway();
+            }
+            else if (animal is Human h)
+            {
+                h.Studdy();
+            }
+            else if (animal is Bush b)
+            {
+                b.Grow();
+            }
+        }
     }
 }

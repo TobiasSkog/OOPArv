@@ -33,5 +33,14 @@
         {
             Console.WriteLine("Iiiiiiiih.");
         }
+        public override void WiggleTail()
+        {
+            Console.WriteLine($"{_name} viftar vådlsamt på svansen.");
+        }
+
+        public void BegForFood()
+        {
+            Console.WriteLine($"{_name} vill ha maten du äter.");
+        }
     }
 }

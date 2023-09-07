@@ -34,5 +34,10 @@ namespace OOPArv.Animals
         {
             Console.WriteLine($"{_name} tillåter människan vara i dens närhet för att få tillgång till bättre föda.");
         }
+
+        public void Climb()
+        {
+            Console.WriteLine($"{_name} klättrar på gardinen.");
+        }
     }
 }
