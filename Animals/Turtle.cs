@@ -50,9 +50,9 @@ namespace OOPArv.Animals
         }
 
         /// <summary>
-        /// Writes out the way a Turtle adapted to its enviroment for survival to the console
+        /// Writes out the way a Turtle adapted to its environment for survival to the console
         /// </summary>
-        public override void AdaptToEnviroment()
+        public override void AdaptToEnvironment()
         {
             Console.WriteLine($"{_name} har ett starkt skal för att skydda sig mot faror.");
         }

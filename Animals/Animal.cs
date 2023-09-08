@@ -1,4 +1,6 @@
-﻿namespace OOPArv.Animals
+﻿using OOPArv.Animals.Interfaces;
+
+namespace OOPArv.Animals
 {
     /// <summary>
     /// A public enum that holds the types of Animals that the subclasses of Animal belongs to
@@ -12,9 +14,9 @@
     }
 
     /// <summary>
-    /// Abstract Super Class Animal that will be the base for all the subclasses in this project
+    /// Abstract Super Class Animal that all the subclasses in this project will inherit
     /// </summary>
-    public abstract class Animal
+    public abstract class Animal : IAnimal
     {
         // Default attribute of the Animal class and all it's sub classes
         // Protected and encapsulated in the scope of the class (and subclasses)
@@ -82,7 +84,7 @@
         /// abstract method that all subclasses have to implement that 
         /// will write out how the animal adapted to its envirement for survival 
         /// </summary>
-        public abstract void AdaptToEnviroment();
+        public abstract void AdaptToEnvironment();
 
         /// <summary>
         /// If the _species attribute is left to default values in assignment this method

@@ -50,9 +50,9 @@ namespace OOPArv.Animals.Species
         }
 
         /// <summary>
-        /// Writes out the way a Bush adapted to its enviroment for survival to the console
+        /// Writes out the way a Bush adapted to its environment for survival to the console
         /// </summary>
-        public override void AdaptToEnviroment()
+        public override void AdaptToEnvironment()
         {
             Console.WriteLine($"{_name} har tjocka kvistar för att skydda sig mot fara.");
         }

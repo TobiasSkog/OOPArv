@@ -46,9 +46,9 @@ namespace OOPArv.Animals
             Console.WriteLine($"{_name} äter allt.");
         }
         /// <summary>
-        /// Writes out the default way a Dog adapted to its enviroment for survival to the console
+        /// Writes out the default way a Dog adapted to its environment for survival to the console
         /// </summary>
-        public override void AdaptToEnviroment()
+        public override void AdaptToEnvironment()
         {
             Console.WriteLine($"{_name} förlitar sig på människan för sin överlevnad.");
         }

@@ -48,9 +48,9 @@ namespace OOPArv.AnimalTypes
         }
 
         /// <summary>
-        /// Writes out the default way a Mammal adapted to its enviroment to the console
+        /// Writes out the default way a Mammal adapted to its environment to the console
         /// </summary>
-        public override void AdaptToEnviroment()
+        public override void AdaptToEnvironment()
         {
             Console.WriteLine($"{_name} anpassar sig till miljön med {_furType} päls för värme och skydd.");
         }

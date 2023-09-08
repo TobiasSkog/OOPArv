@@ -48,9 +48,9 @@ namespace OOPArv.AnimalTypes
         }
 
         /// <summary>
-        /// Writes out the default way a Reptile adapted to its enviroment for survival to the console
+        /// Writes out the default way a Reptile adapted to its environment for survival to the console
         /// </summary>
-        public override void AdaptToEnviroment()
+        public override void AdaptToEnvironment()
         {
             Console.WriteLine(_hasScales ? $"{_name} har anpassat sig med fjäll för att skydda sig mot andra djur." :
                                            $"{_name} har anpassat sig med giftiga klor eller tänder för att försvara sig mot andra djur.");

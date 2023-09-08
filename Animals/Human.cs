@@ -50,17 +50,17 @@ namespace OOPArv.Animals
         }
 
         /// <summary>
-        /// Writes out the way a Human adapted to its enviroment for survival to the console
+        /// Writes out the way a Human adapted to its environment for survival to the console
         /// </summary>
-        public override void AdaptToEnviroment()
+        public override void AdaptToEnvironment()
         {
             Console.WriteLine($"{_name} anpassade miljön runt omkring sig istället för att anpassa sig själv för överlevnad.");
         }
 
         /// <summary>
-        /// Writes out that the human is studdying C#
+        /// Writes out that the human is studying C#
         /// </summary>
-        public void Studdy()
+        public void Study()
         {
             Console.WriteLine($"{_name} studerar C#.");
         }

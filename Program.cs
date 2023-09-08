@@ -59,7 +59,7 @@ internal class Program
         animals.Add(reptile2);
 
         // For every animal we call the methods 
-        // Introduction, MakeSound, Eat, AdaptToEnviroment
+        // Introduction, MakeSound, Eat, AdaptToEnvironment
         // Then we apply logic to check if the current animal is 
         // of a specific subclass then we call that specific class 
         // extra method then add a new line at the end to make 
@@ -69,7 +69,7 @@ internal class Program
             animal.Introduction();
             animal.MakeSound();
             animal.Eat();
-            animal.AdaptToEnviroment();
+            animal.AdaptToEnvironment();
 
             if (animal is Dog d)
             {
@@ -94,7 +94,7 @@ internal class Program
             }
             else if (animal is Human h)
             {
-                h.Studdy();
+                h.Study();
             }
             else if (animal is Bush b)
             {

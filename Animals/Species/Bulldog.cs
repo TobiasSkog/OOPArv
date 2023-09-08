@@ -49,9 +49,9 @@
         }
 
         /// <summary>
-        /// Writes out the way a Bulldog adapted to its enviroment for survival to the console
+        /// Writes out the way a Bulldog adapted to its environment for survival to the console
         /// </summary>
-        public override void AdaptToEnviroment()
+        public override void AdaptToEnvironment()
         {
             Console.WriteLine($"{_name} förlitar sig på människan för sin överlevnad.");
         }

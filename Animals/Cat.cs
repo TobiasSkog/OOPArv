@@ -50,9 +50,9 @@ namespace OOPArv.Animals
         }
 
         /// <summary>
-        /// Writes out the way a Cat adapted to its enviroment for survival to the console
+        /// Writes out the way a Cat adapted to its environment for survival to the console
         /// </summary>
-        public override void AdaptToEnviroment()
+        public override void AdaptToEnvironment()
         {
             Console.WriteLine($"{_name} tillåter människan vara i dens närhet för att få tillgång till bättre föda.");
         }

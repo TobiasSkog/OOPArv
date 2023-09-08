@@ -48,9 +48,9 @@ namespace OOPArv.AnimalTypes
         }
 
         /// <summary>
-        /// Writes out the default way a Plant adapted to its enviroment for survival to the console
+        /// Writes out the default way a Plant adapted to its environment for survival to the console
         /// </summary>
-        public override void AdaptToEnviroment()
+        public override void AdaptToEnvironment()
         {
             Console.WriteLine(_hasThorns ? $"{_name} har anpassat sig med taggar för att skydda sig mot faror." :
                                            $"{_name} har anpassat sig med giftiga blad för att skydda sig mot faror.");
