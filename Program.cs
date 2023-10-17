@@ -29,10 +29,10 @@ internal class Program
         // Creating a new object of Dog, Cat, Chihuahua, Bulldog, Turtle, Human, Bush, Mammal, Reptile
         // Testing the overload constructor with values for all the attributes in each class
         Dog dog2 = new("Båtsman", "en Golden-Retriever", "torrfoder", 16, false, AnimalType.Mammal, "tjock och yvig");
-        Cat cat2 = new("Larre", "en Bondkatt", "Torrfoder", 11, false, AnimalType.Mammal, "kort och sträv", true);
+        Cat cat2 = new("Larre", "en Bondkatt", "torrfoder", 11, false, AnimalType.Mammal, "kort och sträv", true);
         Chihuahua dog_chihuahua2 = new("Carl-Erik Von Blundervik", "en Chihuahua", "bullar", 4, false, AnimalType.Mammal, "kort och stickig");
         Bulldog dog_bulldog2 = new("Francis", "en Bulldog", "blötmat", 9, false, AnimalType.Mammal, "kort och sträv");
-        Turtle turtle2 = new("Åke", "en Aldabrasköldpadda", "gräsätare", 126, true, AnimalType.Reptile, true, "Cryptodira");
+        Turtle turtle2 = new("Åke", "en Aldabrasköldpadda", "gräs", 126, true, AnimalType.Reptile, true, "Cryptodira");
         Human human2 = new("Sebastian", "en Människa", "allätare", 35, true, AnimalType.Mammal, "flintskallig");
         Bush bush2 = new("Buske", "en variant av Buskes-buskus", "vitpeppar", 15, true, AnimalType.Plant, true, true);
         Mammal mammal2 = new("Däggdjure", "ett däggdjur", "allt möjligt", 95, false, AnimalType.Mammal, "fluffigt och tovigt");
